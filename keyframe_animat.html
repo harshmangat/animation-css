@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap" rel="stylesheet">
+
+  <title>Animation</title>
+  <style>
+    
+
+
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #333;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      height: 90vh;
+    }
+
+    .box {
+      background-color: white;
+      width: 70px;
+      height: 70px;
+      position: relative;
+      top: 0;
+      left: 0;
+    
+    }
+
+    .box-1 {
+      /* animation-name: animate1;
+      animation-duration: 5s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      animation-delay: 2s;
+      animation-direction: alternate-reverse;
+      animation-timing-function: ease-in-out; */
+      animation: animate1 5s forwards 1s infinite ease-in-out;
+    }
+
+    @keyframes animate1 {
+      
+      /* to{
+        width: 600px;
+        background-color: red;
+        top: 300px;
+      } */
+
+      25% {
+        top: 0;
+        left: 800px;
+        background-color: #fbc7d4;
+        border-radius: 50% 0 0 0;
+      }
+
+      50% {
+        top: 500px;
+        left: 800px;
+        background-color: turquoise;
+        border-radius: 50% 50% 0 0;
+      }
+      75%{
+        top: 500px;
+        left: 0;
+        background-color: violet;
+        border-radius: 50% 50% 50% 0;
+      }
+
+      100% {
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+      }
+    }
+
+    .box-2 {
+      animation: animate2 5s forwards 1s infinite ease-in-out;
+    }
+
+    @keyframes animate2 {
+      25%{
+        top: 0;
+        left: -600px; 
+        background-color: red;
+      }
+      50% {
+        top: 500px;
+        left: -600px;
+        background-color: green;
+      }
+
+      75% {
+        top: 500px;
+        left: 70px;
+        background-color: yellow;
+      }
+
+      100% {
+        top: 0;
+        left: 0;
+        background-color: tomato;
+        /* right: 0; */
+      }
+    }
+
+    .box-3{
+    transform: rotate(135deg);
+    border-radius: 0 0 0 0.25em;
+      animation: animate3 5s forwards 1s infinite ease;
+    }
+
+    @keyframes animate3 {
+      25%{
+        top: 500px;
+        left: 0;
+        /* border-radius: 500% 500% 0 0; */
+        background-color: #6DD5FA;
+      }
+
+      50% {
+        top: 500px;
+        left: -850px;
+        background-color: #f64f59;
+      }
+
+      75% {
+        top: 0;
+        left: -850px;
+        background-color: #FBD786;
+      }
+
+      100% {
+        top: 0;
+        left: 0;
+        background-color: #bdc3c7;
+      }
+    }
+
+
+    footer{
+      color: #fff;
+      text-align: center;
+      font-size: 5rem;
+      margin-top: -60px;
+    }
+
+    footer > span {
+      font-size: 20px;
+      font-family: 'Calligraffitti', cursive;
+    }
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="box box-1"></div>
+  <div class="box box-2"></div>
+  <div class="box box-3"></div>
+</div>
+
+<footer>&spades;<span>&reg;Harsh</span></footer>
+</body>
+</html>
